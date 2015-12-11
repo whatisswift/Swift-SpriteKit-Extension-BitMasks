@@ -47,45 +47,56 @@ extension SKSpriteNode{
 
 extension SKNode{
     func setBitMasks(categoryBitMask categoryBitMask: UInt32, collisionBitMask: UInt32, contactTestBitMask: UInt32){
-        self.physicsBody!.categoryBitMask = categoryBitMask
-        self.physicsBody!.collisionBitMask = collisionBitMask
-        self.physicsBody!.contactTestBitMask = contactTestBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.categoryBitMask = categoryBitMask
+            physicsBody.collisionBitMask = collisionBitMask
+            physicsBody.contactTestBitMask = contactTestBitMask
+        }
     }
     
     
     func setBitMasks(categoryBitMask categoryBitMask: UInt32, contactTestBitMask: UInt32){
-        self.physicsBody!.categoryBitMask = categoryBitMask
-        self.physicsBody!.contactTestBitMask = contactTestBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.categoryBitMask = categoryBitMask
+            physicsBody.contactTestBitMask = contactTestBitMask
+        }
     }
     
     
     func setBitMasks(categoryBitMask categoryBitMask: UInt32, collisionBitMask: UInt32){
-        self.physicsBody!.categoryBitMask = categoryBitMask
-        self.physicsBody!.collisionBitMask = collisionBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.categoryBitMask = categoryBitMask
+            physicsBody.collisionBitMask = collisionBitMask
+        }
     }
     
     
     func setBitMasks(collisionBitMask: UInt32, contactTestBitMask: UInt32){
-        self.physicsBody!.collisionBitMask = collisionBitMask
-        self.physicsBody!.contactTestBitMask = contactTestBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.collisionBitMask = collisionBitMask
+            physicsBody.contactTestBitMask = contactTestBitMask
+        }
     }
     
     
     func setBitMask(contactTestBitMask contactTestBitMask: UInt32){
-        self.physicsBody!.contactTestBitMask = contactTestBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.contactTestBitMask = contactTestBitMask
+        }
     }
     
     
     func setBitMask(collisionBitMask collisionBitMask: UInt32){
-        self.physicsBody!.collisionBitMask = collisionBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.collisionBitMask = collisionBitMask
+        }
     }
     
     
     func setBitMask(categoryBitMask categoryBitMask: UInt32){
-        self.physicsBody!.categoryBitMask = categoryBitMask
+        if let physicsBody = self.physicsBody{
+            physicsBody.categoryBitMask = categoryBitMask
+        }
         
     }
 }
-
-
-
